@@ -1,0 +1,2 @@
+@509124 Ever since I updated my laptop to the latest Windows version, the fan has been running constantly, and it’s quite loud. I’ve checked the task manager, and there aren’t any programs using an excessive amount of CPU. I’ve also tried resetting the power settings and updating all drivers, but the issue persists. It’s making it hard to focus while working from home. Has anyone else dealt with this after an update? Any advice on how to resolve it would be really helpful!
+

@@ -1,0 +1,1 @@
+﻿Since I updated my Huawei phone to the newest EMUI version, the battery life has been horrible. I've tried all the usual fixes like disabling background sync, lowering the screen brightness, and turning off Bluetooth, but nothing improves the situation. Is anyone else facing this problem after the recent update?

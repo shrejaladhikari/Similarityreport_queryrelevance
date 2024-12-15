@@ -1,0 +1,1 @@
+﻿Ever since I installed the new iOS 17 update, my iPhone’s battery is draining super fast. It used to last me almost 24 hours, but now I need to recharge it by lunchtime. I’ve already factory reset the phone, disabled location services, and minimized app usage, but the problem persists. Could this be a hardware issue, or is it something in the update?

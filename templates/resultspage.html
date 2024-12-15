@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - InteliSearch</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #0077cc;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .results-container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .result-item {
+            width: 100%;
+            max-width: 800px;
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #0077cc;
+        }
+        .result-item h3 {
+            margin: 0;
+            color: #0077cc;
+            font-size: 1.5rem;
+        }
+        .result-item p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        .similarity-score {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+        .precision-recall {
+            font-size: 1.1em;
+            color: #333;
+            margin-top: 20px;
+        }
+        .no-results {
+            color: #666;
+            text-align: center;
+            margin-top: 50px;
+        }
+        mark {
+            background-color: #ffeb3b;
+            font-weight: bold;
+            padding: 0 3px;
+        }
+        .back-button {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .back-button a {
+            padding: 12px 20px;
+            background-color: #0077cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .back-button a:hover {
+            background-color: #005fa3;
+        }
+        @media (max-width: 768px) {
+            .result-item {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Results for "{{ query }}"</h1>
+    <div class="results-container">
+        {% if query and results %}
+            {% for doc_id, similarity in results %}
+                <div class="result-item">
+                    <h3>{{ doc_id }}</h3>
+                    <p class="similarity-score">Similarity: {{ "%.2f"|format(similarity * 100) }}%</p>
+                    <p>{{ docs[doc_id] }}</p>  <!-- Display the document content here -->
+                </div>
+            {% endfor %}
+            <p class="precision-recall">Precision: {{ "%.2f"|format(precision * 100) }}%</p>
+        {% elif query %}
+            <div class="no-results">
+                <p>No results found for your query.</p>
+            </div>
+        {% else %}
+            <div class="no-results">
+                <p>Please enter a search query.</p>
+            </div>
+        {% endif %}
+    </div>
+    <div class="back-button">
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>

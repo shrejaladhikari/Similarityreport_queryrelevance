@@ -1,0 +1,1 @@
+﻿I recently updated my Samsung Galaxy to Android 14, and now my battery life is awful. I used to charge my phone once a day, but now it dies by mid-afternoon, even with minimal use. I've cleared the cache, disabled 5G, and even turned on battery saver mode, but nothing seems to extend the battery life. Is this a known bug in the latest update?
